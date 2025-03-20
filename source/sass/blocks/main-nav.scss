@@ -2,10 +2,9 @@
   //Desktop-first
   display: flex;
   align-items: center;
-
-  .btn {
-    display: none;
-  }
+  background: $bcg-nav;
+  border-radius: 50px;
+  padding: 12px 65px;
 
   @media (max-width: $tablet-width) {
     box-sizing: border-box;
@@ -18,27 +17,11 @@
     padding: 25px 16px;
     background: $white-text;
 
-    .btn {
-      display: flex;
-      margin-top: 10vh;
-      width: max-content;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    }
-
-    & svg {
-      fill: $main-color;
-    }
-
-    & .main-nav__item > a {
-      color: $bcg-black;
-    }
-
     &--closed {
       background: transparent;
-      min-height: 85px;
+      min-height: 50px;
 
-      & .main-nav__list,
-      .btn {
+      * {
         display: none;
       }
     }
@@ -62,23 +45,15 @@
 
   @media (max-width: $tablet-width) {
     margin-top: 25px;
-    display: block;
-
-    &--bottom {
-      margin-top: 20px;
-    }
   }
 }
 
 .main-nav__item {
   cursor: pointer;
 
-  &--shadow {
-    display: none;
-  }
-
   a {
     color: $text-black;
+
     &:hover {
       opacity: 0.8;
     }
@@ -88,21 +63,16 @@
     }
   }
 
+  &.active > a {
+    color: $main-color;
+  }
+
   @media (max-width: $tablet-width) {
     display: flex;
     align-items: center;
     width: 100%;
     min-height: 28px;
     margin-bottom: 30px;
-
-    &--shadow {
-      display: flex;
-      min-height: 10px;
-      margin-top: 50px;
-      box-shadow: 0px 0px 0px 0px rgba(222, 222, 222, 0.1), 0px 4px 10px 0px rgba(222, 222, 222, 0.1),
-      0px 18px 18px 0px rgba(222, 222, 222, 0.09), 0px 40px 24px 0px rgba(222, 222, 222, 0.05),
-      0px 71px 28px 0px rgba(222, 222, 222, 0.01), 0px 111px 31px 0px rgba(222, 222, 222, 0);
-    }
   }
 }
 
@@ -115,9 +85,9 @@
   width: 45px;
   height: 45px;
   padding: 6px 14px;
-  background-color: transparent;
+  background-color: $bcg-nav;
   border: none;
-  border-radius: 40px;
+  border-radius: 50%;
   cursor: pointer;
 
   @media (max-width: $tablet-width) {
@@ -129,13 +99,15 @@
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 8px;
-  right: 0;
-  width: 45px;
-  height: 4px;
-  background-color: $main-color;
-  box-shadow: 0 12px 0 0 $main-color, 0 24px 0 0 $main-color;
-  border-radius: 15px;
+  top: 17px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 21px;
+  height: 2px;
+  background-color: $heading-black;
+  box-shadow:
+    0 5px 0 0 $heading-black,
+    0 10px 0 0 $heading-black;
   transition: all ease-in-out 500ms;
 }
 
@@ -159,12 +131,11 @@
   &::after {
     content: "";
     position: absolute;
-    top: 20px;
-    right: 0;
-    width: 45px;
-    height: 4px;
-    background-color: $main-color;
-    border-radius: 15px;
+    top: 21px;
+    right: 12px;
+    width: 21px;
+    height: 2px;
+    background-color: $heading-black;
     transition: all ease-in-out 500ms;
   }
 

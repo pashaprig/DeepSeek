@@ -1,5 +1,3 @@
-// MENU
-
 class App {
   init() {
     this.initMobileMenu();
@@ -7,14 +5,9 @@ class App {
     this.showHideLicense();
     this.scroll();
     this.initSlider();
-    this.afterVideoPlay();
-    this.onButtonPlay();
   }
 
   constructor() {
-    this.iframe = document.querySelector('iframe');
-    this.player = new Vimeo.Player(this.iframe);
-    this.btnPlay = document.querySelector('#button-play')
   }
 
   initMobileMenu() {
@@ -192,26 +185,6 @@ class App {
         ]
       });
     })
-  }
-
-  afterVideoPlay() {
-    const vidoWrapper = document.querySelector('.promo__video')
-
-    const onPlay = () => {
-      vidoWrapper.style.borderRadius = 'unset';
-      this.btnPlay.style.display = 'none'
-    };
-
-    this.player.on('play', onPlay);
-  }
-
-  onButtonPlay() {
-    const playVideo = () => {
-      this.player.play()
-      this.btnPlay.style.display = 'none'
-    }
-
-    this.btnPlay.addEventListener('click', playVideo);
   }
 }
 

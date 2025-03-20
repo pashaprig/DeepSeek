@@ -22,31 +22,42 @@
   <header class="page-header container">
     <picture>
       <source type="image/webp" srcset="img/img/logo.webp">
-      <img width="182" height="64" class="page-header__img" src="img/img/logo.png" alt="Логотип Halyk Bank">
+      <img width="282" height="83" class="page-header__img" src="img/img/logo.png" alt="Логотип Halyk Bank">
     </picture>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--shadow"></li>
-        <li class="main-nav__item"><a href="#bank">Преимущества</a></li>
-        <li class="main-nav__item"><a href="#calculator">Калькулятор</a></li>
-        <li class="main-nav__item"><a href="#about-bank">Halyk Bank</a></li>
-        <li class="main-nav__item"><a href="#license">Лицензия</a></li>
-        <li class="main-nav__item"><a href="#start">Инвестирование</a></li>
-        <li class="main-nav__item"><a href="#review">Отзывы</a></li>
+        <li class="main-nav__item active"><a href="#home">Home</a></li>
+        <li class="main-nav__item"><a href="#about-us">About us</a></li>
+        <li class="main-nav__item"><a href="#services">Services</a></li>
+        <li class="main-nav__item"><a href="#сontact-us">Contact Us</a></li>
       </ul>
-      <a class="btn mobile-only" href="#leadform1">Присоединиться к проекту</a>
+      <div class="page-header__lang-wrapper mobile-only">
+        <select name="select">
+          <option value="en">en</option>
+          <option value="ru">ru</option>
+        </select>
+        <button class="btn">Оставить заявку на доступ</button>
+      </div>
       <button class="main-nav__toggle" type="button">
         <span class="main-nav__open-btn-text visually-hidden">Mеню</span>
       </button>
     </nav>
+    <div class="page-header__lang-wrapper desktop-only">
+      <select name="select">
+        <option value="en">en</option>
+        <option value="ru">ru</option>
+      </select>
+      <button class="btn">Оставить заявку на доступ</button>
+    </div>
   </header>
   <main>
     <section class="promo">
       <div class="promo__wrapper">
-        <h1 class="promo__heading heading">Получай дивиденды от <span>150&nbsp;000&nbsp;₸</span> в неделю</h1>
-        <p class="promo__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в
-          Казахстане.</p>
-        <form action="#" class="form" method="POST" id="leadform1">
+        <h2 class="promo__sub-heading">DeepSeek V3 Trader</h2>
+        <h1 class="promo__heading heading-color">Добро пожаловать в DeepSeek V3 Trader&nbsp;– cледующее поколение трейдинга</h1>
+        <p class="promo__about">Инновационная платформа, где искусственный интеллект работает на ваш капитал.</p>
+        <button class="btn">Оставить заявку на доступ</button>
+        <!-- <form action="#" class="form" method="POST" id="leadform1">
           <input type="text" name="name" id="name" placeholder="Имя Фамилия">
           <input type="email" name="email" id="email" placeholder="Эл. адрес">
           <input type="tel" name="phone1" placeholder="" id="phone1" />
@@ -61,28 +72,9 @@
           <div class="form_message error inactive"
             style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
           </div>
-        </form>
+        </form> -->
       </div>
 
-      <div class="promo__wrapper  promo__wrapper--mw53">
-        <div class="promo__video-bcg">
-          <div class="promo__video">
-            <button type="button" id="button-play">
-              <svg width="38" height="44">
-                <use xlink:href="img/sprite.svg#play"></use>
-              </svg>
-            </button>
-            <div style="padding:56.25% 0 0 0;position:relative;">
-              <iframe
-                src="https://player.vimeo.com/video/833805934?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&"
-                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Yandex_land">
-              </iframe>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
-          </div>
-        </div>
-      </div>
     </section>
 
     <section class="bank container" id="bank">
@@ -309,7 +301,8 @@
 
     <section class="come-on container">
       <h2 class="come-on__heading heading">Получай дивиденды от 150 000 ₸ в неделю</h2>
-      <p class="come-on__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в Казахстане.</p>
+      <p class="come-on__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в
+        Казахстане.</p>
       <form action="#" class="form form--bottom" method="POST" id="leadform2">
         <input type="text" name="name" id="name2" placeholder="Имя Фамилия">
         <input type="email" name="email" id="email2" placeholder="Эл. адрес">
@@ -354,297 +347,6 @@
   <script src="js/ion.rangeSlider.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/intlTelInput.min.js"></script>
-  <script src="js/jquery.validate.js"></script>
-  <script src="js/jquery.maskedinput.js"></script>
-
-  <script>
-    //phone
-    //first form
-    var input1 = document.querySelector("#phone1");
-    var phoneInput1 = window.intlTelInput(input1, {
-      separateDialCode: true,
-      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-      initialCountry: "auto",
-      excludeCountries: ["UA"],
-      geoIpLookup: function(success, failure) {
-        $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-          $("#country1").val(resp.country);
-          $("#country2").val(resp.country);
-          var countryCode =
-            resp && checkCountry(resp.country) ? resp.country : "DE";
-          success(countryCode);
-        });
-      },
-    });
-
-
-    function checkCountry(code) {
-      var arr = ["UA"];
-      return !arr.includes(code);
-    }
-
-    $.validator.addMethod(
-      "validNumber",
-      function(value, element, params) {
-        var obj = params.object;
-        if (obj.isValidNumber()) {
-          var num = obj.getNumber().replace("+", "");
-          $(element)
-            .closest("form")
-            .find(".hidden-phone")
-            .val("+" + num);
-        }
-        return obj.isValidNumber();
-      },
-      "ⓘ Введите правильный номер!"
-    );
-
-    const nameForm1 = document.querySelector("#name");
-    const nameForm2 = document.querySelector("#name2");
-    const emailForm1 = document.querySelector("#email");
-    const emailForm2 = document.querySelector("#email2");
-
-    function removeExtraSpaces(e) {
-      const valueWithoutSpaces = e.target.value.replace(/\s+/g, ' ').replace(/^\s+|\s+$/, '');
-      e.target.value = valueWithoutSpaces
-    }
-    nameForm1.addEventListener("focusout", removeExtraSpaces);
-    nameForm2.addEventListener("focusout", removeExtraSpaces);
-
-    // Form validation
-    $.validator.addMethod(
-      "alphanumeric",
-      function(value, element) {
-        return this.optional(element) || /^[a-zA-Zа-яА-ЯЁё\s]+$/.test(value.replace(/ +/g, ' ').trim()); //RU
-      },
-      "ⓘ Имя может содержать только буквы!"
-    );
-
-    $.validator.addMethod(
-      "nameSurname",
-      function(value, element) {
-        return this.optional(element) || /^[a-zA-Zа-яА-ЯЁё]+(\s+[a-zA-Zа-яА-ЯЁё]+)$/.test(value.replace(/ +/g, ' ').trim()); //RU
-      },
-      "ⓘ Укажите имя и фамилию через пробел"
-    );
-
-    // Email validation
-    $.validator.addMethod("emailValidation", function(value, element) {
-      return this.optional(element) || /^[a-zA-Z0-9_.!#$%&\'*+\-\/=?^_`{|}~]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?){1,61}$/g.test(value);
-    }, "ⓘ Введите правильный адрес");
-
-
-    function removeDotsHyphens(e) {
-      const valueWithoutDotsHyphens = e.target.value.replace(/\.+/g, '.').replace(/-{2,}/g, '--').replace(/^\.|^-*/, '').replace(/\.@/, '@');
-      e.target.value = valueWithoutDotsHyphens;
-    }
-    emailForm1.addEventListener("change", removeDotsHyphens);
-    emailForm2.addEventListener("change", removeDotsHyphens);
-
-    //Trim whitespace on email input
-    $(function() {
-      $('input[type=email]').on('keypress', function(e) {
-        if (e.which == 32)
-          return false;
-      });
-    });
-
-    $("#leadform1").validate({
-      rules: {
-        phone1: {
-          required: true,
-          validNumber: {
-            object: phoneInput1,
-          },
-        },
-        name: {
-          required: true,
-          alphanumeric: true,
-          nameSurname: true,
-        },
-        email: {
-          required: true,
-          email: false,
-          emailValidation: true,
-        }
-      },
-      messages: {
-        phone1: {
-          required: "ⓘ Это поле обязательное",
-        },
-        name: {
-          required: "ⓘ Это поле обязательное",
-        },
-        email: {
-          required: "ⓘ Это поле обязательное"
-        },
-      },
-      submitHandler: function(form, event) {
-        sendAjaxForm(form);
-        return false;
-
-      }
-    });
-
-    function sendAjaxForm(form) {
-      $.ajax({
-        url: $(form).attr('action'),
-        type: "POST",
-        dataType: "json",
-        data: $(form).serialize(),
-        timeout: 30000,
-        beforeSend: function() {
-          $(form).find(".submit_btn ").html('Отправление');
-          $(form).find(".submit_btn").prop('disabled', true);
-        },
-
-      }).done(function(response) {
-        let result = response;
-        let url = result.url;
-        if (response.status === 'ok') {
-          fbq('track', 'Lead');
-          call_gtag();
-          ttq.page();
-          $(form).find(".submit_btn").html('Данные отправлены успешно.');
-          if (response.url) {
-            setTimeout(function() {
-              window.location.href = response.url;
-            }, 1000);
-          } else {
-            $(form).html('<div class="form_message success" style="display: block;margin:15px 0;background-color: #d4ffe0;border: 2px dashed #1f6b34;border-radius: 10px;padding: 20px; color:#0d0c0c">Ваши данные успешно отправлены. Ожидайте звонка от нашего менеджера.</div>');
-          }
-
-        } else {
-          $(form).find('.error.form_message').addClass('active');
-          $(form).find('.error.form_message').html(response.message);
-          $(form).find(".submit_btn ").html('Начать зарабатывать');
-          $(form).find(".submit_btn").prop('disabled', false);
-        }
-
-
-      }).fail(function(response) {
-        $(form).find('.error.form_message').addClass('active');
-        $(form).find('.error.form_message').html('Во время отправки данных произошла ошибка!');
-        $(form).find(".submit_btn ").html('Начать зарабатывать');
-        $(form).find(".submit_btn").prop('disabled', false);
-      });
-    }
-
-    $(window).on("load", function() {
-      setTimeout(function() {
-        const selectedCountryIso1 = phoneInput1.getSelectedCountryData().iso2;
-        if (selectedCountryIso1 === 'at' || selectedCountryIso1 === 'de') {
-          var mask1 = jQuery("#phone1").attr("placeholder").replace(/[0-9]/g, 9) + "?9?9";
-        } else {
-          var mask1 = jQuery("#phone1").attr("placeholder").replace(/[0-9]/g, 9);
-        }
-
-        $(document).ready(function() {
-          jQuery("#phone1").mask(mask1, {
-            autoclear: false
-          });
-        });
-
-        jQuery("#phone1").on("countrychange", function(e, countryData) {
-          jQuery("#phone1").val("");
-          const selectedCountryIso1 = phoneInput1.getSelectedCountryData().iso2;
-          if (selectedCountryIso1 === 'at' || selectedCountryIso1 === 'de') {
-            var mask1 = jQuery("#phone1").attr("placeholder").replace(/[0-9]/g, 9) + "?9?9";
-          } else {
-            var mask1 = jQuery("#phone1").attr("placeholder").replace(/[0-9]/g, 9);
-          }
-          jQuery("#phone1").mask(mask1, {
-            autoclear: false
-          });
-        });
-      }, 1000);
-    });
-
-    //second form
-    var input2 = document.querySelector("#phone2");
-    var phoneInput2 = window.intlTelInput(input2, {
-      separateDialCode: true,
-      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-      initialCountry: "auto",
-      excludeCountries: ["UA"],
-      geoIpLookup: function(success, failure) {
-        $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-          var countryCode =
-            resp && checkCountry(resp.country) ? resp.country : "DE";
-          success(countryCode);
-        });
-      },
-    });
-
-    $("#leadform2").validate({
-      rules: {
-        phone2: {
-          required: true,
-          validNumber: {
-            object: phoneInput2,
-          },
-        },
-        name: {
-          required: true,
-          alphanumeric: true,
-          nameSurname: true,
-        },
-        email: {
-          required: true,
-          email: false,
-          emailValidation: true,
-        }
-      },
-      messages: {
-        phone2: {
-          required: "ⓘ Это поле обязательное",
-        },
-        name: {
-          required: "ⓘ Это поле обязательное",
-        },
-        email: {
-          required: "ⓘ Это поле обязательное",
-        },
-      },
-      submitHandler: function(form, event) {
-        sendAjaxForm(form);
-        return false;
-
-      },
-    });
-
-    $(window).on("load", function() {
-      setTimeout(function() {
-        const selectedCountryIso2 = phoneInput2.getSelectedCountryData().iso2;
-        if (selectedCountryIso2 === 'at' || selectedCountryIso2 === 'de') {
-          var mask1 = jQuery("#phone2").attr("placeholder").replace(/[0-9]/g, 9) + "?9?9";
-        } else {
-          var mask1 = jQuery("#phone2").attr("placeholder").replace(/[0-9]/g, 9);
-        }
-
-        $(document).ready(function() {
-          jQuery("#phone2").mask(mask1, {
-            autoclear: false
-          });
-        });
-
-        jQuery("#phone2").on("countrychange", function(e, countryData) {
-          jQuery("#phone2").val("");
-          const selectedCountryIso2 = phoneInput2.getSelectedCountryData().iso2;
-          if (selectedCountryIso2 === 'at' || selectedCountryIso2 === 'de') {
-            var mask1 = jQuery("#phone2").attr("placeholder").replace(/[0-9]/g, 9) + "?9?9";
-          } else {
-            var mask1 = jQuery("#phone2").attr("placeholder").replace(/[0-9]/g, 9);
-          }
-          jQuery("#phone2").mask(mask1, {
-            autoclear: false
-          });
-        });
-      }, 1000);
-    });
-
-  </script>
 </body>
 
 </html>
