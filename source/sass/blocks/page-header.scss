@@ -1,6 +1,7 @@
 .page-header {
   box-sizing: border-box;
   display: flex;
+  gap: 10px;
   align-items: center;
   justify-content: space-between;
   padding-top: 28px;
@@ -44,5 +45,9 @@
   select:active,
   select:focus {
     outline: 1px solid $main-color;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: auto;
   }
 }
