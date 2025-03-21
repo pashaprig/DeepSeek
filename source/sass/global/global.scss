@@ -80,6 +80,15 @@ button {
   }
 }
 
+.heading {
+  font-size: 31px;
+  font-weight: 400;
+
+  @media (max-width: $tablet-width) {
+    font-size: 25px;
+  }
+}
+
 .heading-color {
   color: $heading-black;
   font-weight: 400;
