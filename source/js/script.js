@@ -2,8 +2,6 @@ class App {
   init() {
     this.initMobileMenu();
     this.initRange();
-    this.showHideLicense();
-    this.scroll();
     this.initSlider();
   }
 
@@ -88,78 +86,6 @@ class App {
         },
       });
     });
-  }
-
-  showHideLicense() {
-    const $openBtn = document.querySelector('[data-open-modal]')
-    const $closeBtn = document.querySelector('[data-close-modal]')
-    const $modal = document.querySelector('[data-modal]')
-    const $licenseImg = document.querySelector('.license__img')
-
-    $licenseImg.addEventListener('click', showModal);
-    $openBtn.addEventListener('click', showModal);
-
-    function showModal() {
-      $modal.showModal();
-    }
-
-    $closeBtn.addEventListener('click', () => {
-      $modal.close()
-    })
-
-    $modal.addEventListener('click', e => {
-      const dialogDimentions = $modal.getBoundingClientRect()
-      if (
-        e.clientX < dialogDimentions.left ||
-        e.clientX > dialogDimentions.right ||
-        e.clientY < dialogDimentions.top ||
-        e.clientY > dialogDimentions.bottom
-      ) {
-        $modal.close()
-      }
-    })
-  }
-
-  scroll() {
-    let scrollToFirst, scrollToSecond, scrollToThird, scrollToLast;
-    const deviceWidth = document.documentElement.clientWidth
-
-    if (deviceWidth > 768) {
-      // desktop
-      scrollToFirst = 4700
-      scrollToSecond =4850
-      scrollToThird =5000
-      scrollToLast =5200
-    } else {
-      // mobile
-      scrollToFirst = 5200
-      scrollToSecond =5400
-      scrollToThird =5700
-      scrollToLast =5900
-    }
-
-    const circles = document.querySelectorAll('.start__about')
-
-    function resetColors() {
-      circles.forEach(c => { c.classList.remove('start__about--active') })
-    }
-
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset < scrollToFirst) {
-        resetColors();
-        circles[0].classList.add('start__about--active')
-      } else if (window.pageYOffset < scrollToSecond) {
-        resetColors();
-        circles[1].classList.add('start__about--active')
-      } else if (window.pageYOffset < scrollToThird) {
-        resetColors();
-        circles[2].classList.add('start__about--active')
-      } else if (window.pageYOffset > scrollToLast) {
-        resetColors();
-        circles[3].classList.add('start__about--active')
-      }
-    })
-
   }
 
   initSlider() {
