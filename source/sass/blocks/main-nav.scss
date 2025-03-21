@@ -5,7 +5,6 @@
   width: 40%;
   align-items: center;
   background: $bcg-nav;
-  border-radius: 50px;
   padding: 12px 65px;
 
   @media (max-width: $tablet-width) {
@@ -17,12 +16,13 @@
     align-items: start;
     min-height: 100vh;
     width: 100%;
-    padding: 35px;
+    padding: 35px 16px;
     background: $basic-white;
 
     &--closed {
       background: transparent;
-      min-height: 50px;
+      min-height: 0;
+      height: 0;
 
       * {
         display: none;
@@ -68,16 +68,12 @@
     color: $text-black;
 
     &:hover {
-      opacity: 0.8;
+      color: $main-color;
     }
 
     &:active {
       opacity: 0.6;
     }
-  }
-
-  &.active > a {
-    color: $main-color;
   }
 
   @media (max-width: $tablet-width) {

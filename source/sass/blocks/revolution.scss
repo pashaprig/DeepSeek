@@ -17,7 +17,7 @@
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
   width: 100%;
   padding: 30px 66px;
@@ -38,11 +38,13 @@
   max-width: 486px;
 
   svg {
+    fill: none;
     margin-bottom: 30px;
   }
 
   @media (max-width: $tablet-width) {
     width: 100%;
+    max-width: unset;
 
     svg {
       margin-bottom: 15px;
