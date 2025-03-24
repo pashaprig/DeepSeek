@@ -50,22 +50,41 @@ class App {
   }
 
   initRange() {
+    function getMonthWord(number) {
+      const lastDigit = number % 10;
+      const lastTwoDigits = number % 100;
+
+      if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+        return "месяцев";
+      }
+
+      switch (lastDigit) {
+        case 1:
+          return "месяц";
+        case 2:
+        case 3:
+        case 4:
+          return "месяца";
+        default:
+          return "месяцев";
+      }
+    }
     $(function () {
       $(".js-range-slider").ionRangeSlider({
         skin: "round",
         hide_min_max: false,
         hide_from_to: true,
-        min: 50000,
-        max: 10000000,
-        from: 18000,
-        postfix: " ₸",
+        min: 250,
+        max: 10000,
+        from: 5000,
+        postfix: " $",
         grid: false,
         onStart: function (data) {
-          $("#calcResult").text(data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₸');
+          $("#calcResult").text('$ ' + data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
         },
         onChange: function (data) {
-          $("#profitValue").text(Math.round((data.from * 0.32) + data.from).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₸');
-          $("#calcResult").text(data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₸');
+          $("#profitValue").text('$ ' + Math.round((data.from * 0.32) + data.from).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+          $("#calcResult").text('$ ' + data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
         },
       });
     });
@@ -73,16 +92,30 @@ class App {
       $(".js-range-slider2").ionRangeSlider({
         skin: "round",
         hide_min_max: false,
-        hide_from_to: false,
+        hide_from_to: true,
         min: 1,
-        max: 60,
-        from: 1,
-        postfix: " мес.",
+        max: 12,
+        from: 4,
+        postfix: " месяц",
         grid: false,
+        onStart: function () {
+          setTimeout(function() {
+            const slider = document.querySelector(".js-irs-1");
+            if (slider) {
+              const max = slider.querySelector(".irs-max");
+              if (max) {
+                max.textContent = "12 месяцев";
+              }
+            }
+          }, 100);
+        },
         onChange: function (data) {
-          const summValue = document.querySelector('#profitValue')
-          const value = summValue.textContent.slice(0, -1).replace(/ /g, '');
-          summValue.textContent = Math.round(Number(value * 1.02).toFixed(1)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₸';
+          const monthWord = getMonthWord(data.from);
+          $("#calcResult2").text(data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ' + monthWord);
+
+          const summValue = document.querySelector('#profitValue');
+          const value = summValue.textContent.replace('$', '').trim().replace(/ /g, '');
+          summValue.textContent = `$ ${Math.round(Number(value * 1.02).toFixed(1)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}`;
         },
       });
     });

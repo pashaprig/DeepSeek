@@ -183,35 +183,47 @@
         <h2 class="ceo__heading heading desktop-only">Комментарий основателя<br>DeepSeek</h2>
         <p class="ceo__text">“AI меняет трейдинг, делая его точным и быстрым. Наша миссия в DeepSeek – дать инвесторам
           возможность анализировать данные и принимать решения в реальном времени с помощью точных алгоритмов. Мы
-          уверены, AI <strong>снижает риски</strong> и открывает безграничные возможности для роста капитала. Наша платформа – уникальный
-          инструмент для <strong>финансовой независимости</strong>, объединяющий инновации, многолетний опыт и лучшие мировые практики,
+          уверены, AI <strong>снижает риски</strong> и открывает безграничные возможности для роста капитала. Наша
+          платформа – уникальный
+          инструмент для <strong>финансовой независимости</strong>, объединяющий инновации, многолетний опыт и лучшие
+          мировые практики,
           чтобы сделать инвестиции <strong>доступными и прибыльными</strong> для всех.”</p>
         <button class="btn">Оставить заявку на доступ</button>
       </div>
     </section>
 
     <section class="calculator container" id="calculator">
-      <div class="calculator__wrapper">
-        <h2 class="profit__heading heading heading--small">Калькулятор</h2>
-        <p class="calculator__about">Просчитайте ваш доход всего за пару минут</p>
+      <div class="calculator__text-wrapper">
+        <h2 class="calculator__heading heading ">Запланируйте своё будущее с нашим калькулятором</h2>
+        <p class="calculator__about desktop-only">Используя более 1,000 рыночных параметров, наш ИИ мгновенно предоставляет детальный
+          прогноз, который поможет вам увидеть, как ваши вложения могут расти с течением времени. Это мощный инструмент
+          для выбора оптимальной стратегии и достижения ваших финансовых целей.</p>
+        <p class="calculator__about mobile-only">Используя более 1,000 рыночных параметров, наш ИИ мгновенно предоставляет детальный
+          прогноз, который поможет вам увидеть, как ваши вложения могут расти с течением времени. </p>
       </div>
 
       <div class="calculator__wrapper">
+        <div class="calculator__potential-wraper">
+          <h3>Ваш потенциальный доход:</h3>
+          <span id="profitValue">$ 1 220 522</span>
+          <p>Не упустите свой шанс воспользоваться современной системой на основе ИИ в нефтегазовой отрасли.
+            Заполните форму, свяжитесь с менеджером и начните инвестировать прямо сейчас!</p>
+          <button class="btn">Оставить заявку на доступ</button>
+        </div>
+
         <div class="profit__wrapper">
           <div class="calculator__range">
-            <div class="profit__sum">
-              <label class="">Сколько хотите заработать?</label>
-              <h3 class="" id="calcResult"></h3>
-            </div>
+
+            <label>Выберите сумму инвестиций</label>
             <input type="text" class="js-range-slider" name="my_range" value="150" />
-            <p>Выберите срок инвестирования</p>
+
+            <h3 class="calculator__result" id="calcResult">1</h3>
+
+            <label>Выберите длительность инвестиций</label>
             <input type="text" class="js-range-slider2" name="my_range2" value="150" />
-            <div class="profit__amount">
-              <label class="">Сумма инвестирования</label>
-              <span class="heading" id="profitValue">50000 ₸</span>
-            </div>
-            <a href="#leadform1" class="btn">Отправить заявку</a>
-            <p class="calculator__att">Предварительный расчет. Не является публичной офертой</p>
+
+            <h3 class="calculator__result" id="calcResult2">4 месяца</h3>
+
           </div>
         </div>
       </div>
