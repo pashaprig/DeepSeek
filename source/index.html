@@ -176,57 +176,185 @@
       <button class="btn">Оставить заявку на доступ</button>
     </section>
 
-    <section class="ceo container">
-      <h2 class="ceo__heading heading mobile-only">Комментарий основателя<br>DeepSeek</h2>
-      <img width="650" height="546" class="ceo__img" src="img/img/ceo.webp" alt="CEO DeepSeek">
-      <div class="ceo__text-wrapper">
-        <h2 class="ceo__heading heading desktop-only">Комментарий основателя<br>DeepSeek</h2>
-        <p class="ceo__text">“AI меняет трейдинг, делая его точным и быстрым. Наша миссия в DeepSeek – дать инвесторам
-          возможность анализировать данные и принимать решения в реальном времени с помощью точных алгоритмов. Мы
-          уверены, AI <strong>снижает риски</strong> и открывает безграничные возможности для роста капитала. Наша
-          платформа – уникальный
-          инструмент для <strong>финансовой независимости</strong>, объединяющий инновации, многолетний опыт и лучшие
-          мировые практики,
-          чтобы сделать инвестиции <strong>доступными и прибыльными</strong> для всех.”</p>
-        <button class="btn">Оставить заявку на доступ</button>
-      </div>
-    </section>
-
-    <section class="calculator container" id="calculator">
-      <div class="calculator__text-wrapper">
-        <h2 class="calculator__heading heading ">Запланируйте своё будущее с нашим калькулятором</h2>
-        <p class="calculator__about desktop-only">Используя более 1,000 рыночных параметров, наш ИИ мгновенно предоставляет детальный
-          прогноз, который поможет вам увидеть, как ваши вложения могут расти с течением времени. Это мощный инструмент
-          для выбора оптимальной стратегии и достижения ваших финансовых целей.</p>
-        <p class="calculator__about mobile-only">Используя более 1,000 рыночных параметров, наш ИИ мгновенно предоставляет детальный
-          прогноз, который поможет вам увидеть, как ваши вложения могут расти с течением времени. </p>
-      </div>
-
-      <div class="calculator__wrapper">
-        <div class="calculator__potential-wraper">
-          <h3>Ваш потенциальный доход:</h3>
-          <span id="profitValue">$ 1 220 522</span>
-          <p>Не упустите свой шанс воспользоваться современной системой на основе ИИ в нефтегазовой отрасли.
-            Заполните форму, свяжитесь с менеджером и начните инвестировать прямо сейчас!</p>
+    <div class="ceo-calculator__bcg-wrapper">
+      <section class="ceo container">
+        <h2 class="ceo__heading heading mobile-only">Комментарий основателя<br>DeepSeek</h2>
+        <img width="650" height="546" class="ceo__img" src="img/img/ceo.webp" alt="CEO DeepSeek">
+        <div class="ceo__text-wrapper">
+          <h2 class="ceo__heading heading desktop-only">Комментарий основателя<br>DeepSeek</h2>
+          <p class="ceo__text">“AI меняет трейдинг, делая его точным и быстрым. Наша миссия в DeepSeek – дать инвесторам
+            возможность анализировать данные и принимать решения в реальном времени с помощью точных алгоритмов. Мы
+            уверены, AI <strong>снижает риски</strong> и открывает безграничные возможности для роста капитала. Наша
+            платформа – уникальный
+            инструмент для <strong>финансовой независимости</strong>, объединяющий инновации, многолетний опыт и лучшие
+            мировые практики,
+            чтобы сделать инвестиции <strong>доступными и прибыльными</strong> для всех.”</p>
           <button class="btn">Оставить заявку на доступ</button>
         </div>
+      </section>
 
-        <div class="profit__wrapper">
-          <div class="calculator__range">
+      <section class="calculator container" id="calculator">
+        <div class="calculator__text-wrapper">
+          <h2 class="calculator__heading heading ">Запланируйте своё будущее с нашим калькулятором</h2>
+          <p class="calculator__about desktop-only">Используя более 1,000 рыночных параметров, наш ИИ мгновенно
+            предоставляет детальный
+            прогноз, который поможет вам увидеть, как ваши вложения могут расти с течением времени. Это мощный
+            инструмент
+            для выбора оптимальной стратегии и достижения ваших финансовых целей.</p>
+          <p class="calculator__about mobile-only">Используя более 1,000 рыночных параметров, наш ИИ мгновенно
+            предоставляет детальный
+            прогноз, который поможет вам увидеть, как ваши вложения могут расти с течением времени. </p>
+        </div>
 
-            <label>Выберите сумму инвестиций</label>
-            <input type="text" class="js-range-slider" name="my_range" value="150" />
+        <div class="calculator__wrapper">
+          <div class="calculator__potential-wraper">
+            <h3>Ваш потенциальный доход:</h3>
+            <span id="profitValue">$ 1 220 522</span>
+            <p>Не упустите свой шанс воспользоваться современной системой на основе ИИ в нефтегазовой отрасли.
+              Заполните форму, свяжитесь с менеджером и начните инвестировать прямо сейчас!</p>
+            <button class="btn">Оставить заявку на доступ</button>
+          </div>
 
-            <h3 class="calculator__result" id="calcResult">1</h3>
+          <div class="profit__wrapper">
+            <div class="calculator__range">
 
-            <label>Выберите длительность инвестиций</label>
-            <input type="text" class="js-range-slider2" name="my_range2" value="150" />
+              <label>Выберите сумму инвестиций</label>
+              <input type="text" class="js-range-slider" name="my_range" value="150" />
 
-            <h3 class="calculator__result" id="calcResult2">4 месяца</h3>
+              <h3 class="calculator__result" id="calcResult">1</h3>
 
+              <label>Выберите длительность инвестиций</label>
+              <input type="text" class="js-range-slider2" name="my_range2" value="150" />
+
+              <h3 class="calculator__result" id="calcResult2">4 месяца</h3>
+
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+    </div>
+
+    <section class="table container">
+      <table>
+        <thead>
+          <tr>
+            <th>Benchmark (Metric)</th>
+            <th>DeepSeek V3</th>
+            <th>Qwen2.5</th>
+            <th>Llama3.1</th>
+            <th>Claude-3.5</th>
+            <th>GPT-4o</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Строки данных -->
+          <tr>
+            <td>Architecture</td>
+            <td>MoE</td>
+            <td>Dense</td>
+            <td>Dense</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td># Activated Params</td>
+            <td>37B</td>
+            <td>72B</td>
+            <td>405B</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td># Total Params</td>
+            <td>671B</td>
+            <td>72B</td>
+            <td>405B</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Сode</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>HumanEval-Mul (Pass@1)</td>
+            <td>82.6</td>
+            <td>77.3</td>
+            <td>77.2</td>
+            <td>81.7</td>
+            <td>80.5</td>
+          </tr>
+          <tr>
+            <td>LiveCodeBench (Pass@1-COT)</td>
+            <td>40.5</td>
+            <td>31.1</td>
+            <td>28.4</td>
+            <td>36.3</td>
+            <td>33.4</td>
+          </tr>
+          <tr>
+            <td>LiveCodeBench (Pass@1)</td>
+            <td>37.6</td>
+            <td>28.7</td>
+            <td>30.1</td>
+            <td>32.8</td>
+            <td>34.2</td>
+          </tr>
+          <tr>
+            <td>Codeforces (Percentile)</td>
+            <td>51.6</td>
+            <td>24.8</td>
+            <td>25.3</td>
+            <td>20.3</td>
+            <td>23.6</td>
+          </tr>
+          <tr>
+            <td>Aider-Polyglot (Acc.)</td>
+            <td>49.6</td>
+            <td>7.6</td>
+            <td>5.8</td>
+            <td>45.3</td>
+            <td>16.0</td>
+          </tr>
+          <tr>
+            <td>Math</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>AIME 2024 (Pass@1)</td>
+            <td>39.2</td>
+            <td>23.3</td>
+            <td>23.3</td>
+            <td>16.0</td>
+            <td>9.3</td>
+          </tr>
+          <tr>
+            <td>MATH-500 (EM)</td>
+            <td>90.2</td>
+            <td>80.0</td>
+            <td>73.8</td>
+            <td>78.3</td>
+            <td>74.6</td>
+          </tr>
+          <tr>
+            <td>CNMO 2024 (Pass@1)</td>
+            <td>43.2</td>
+            <td>15.9</td>
+            <td>6.8</td>
+            <td>13.1</td>
+            <td>10.8</td>
+          </tr>
+        </tbody>
+      </table>
+
     </section>
 
     <section class="review container" id="review">

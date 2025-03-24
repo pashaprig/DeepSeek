@@ -4,12 +4,17 @@
   align-items: center;
   gap: 48px;
   padding-top: 60px;
-  padding-bottom: 60px;
-  background: no-repeat 0% -170% url("../img/bcg/calculator-bcg.png");
+  background: no-repeat 0% -270% url("../img/bcg/calculator-bcg.webp");
 
   @media (max-width: $tablet-width) {
     padding-top: 36px;
     padding-bottom: 36px;
+  }
+}
+
+.calculator__heading {
+  @media (max-width: $tablet-width) {
+    font-weight: 700;
   }
 }
 

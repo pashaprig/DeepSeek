@@ -5,11 +5,11 @@
   padding-top: 50px;
   padding-bottom: 50px;
   color: $basic-white;
-  background: $main-color no-repeat 100% 100% url("../img/bcg/come-on-bcg.png");
+  background: $main-color no-repeat 100% 100% url("../img/bcg/come-on-bcg.webp");
   background-size: contain;
 
   @media (max-width: $tablet-width) {
-    background: $main-color no-repeat 10% 100% url("../img/bcg/come-on-bcg.png");
+    background: $main-color no-repeat 10% 100% url("../img/bcg/come-on-bcg.webp");
     background-size: cover;
 
     .come-on__heading,

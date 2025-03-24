@@ -1,3 +1,10 @@
+
+.ceo-calculator__bcg-wrapper {
+  @media (max-width: $tablet-width) {
+    background: no-repeat 0 60% url("../img/bcg/calculator-bcg.webp");
+  }
+}
+
 .ceo {
   display: flex;
   flex-wrap: wrap;
