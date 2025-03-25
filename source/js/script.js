@@ -124,27 +124,32 @@ class App {
   initSlider() {
     $(function () {
       $('.slider').slick({
-        arrows: false,
-        slidesToShow: 3,
+        arrows: true,
+        slidesToShow: 4,
+        variableWidth: true,
+        centerMode: false,
+        dots: false,
         responsive: [
           {
             breakpoint: 1024,
             settings: {
               slidesToShow: 2,
-              dots: true,
+              variableWidth: true,
             }
           },
           {
             breakpoint: 480,
             settings: {
               slidesToShow: 1,
-              dots: true,
+              variableWidth: true,
             }
           },
         ]
       });
     })
   }
+
+
 }
 
 const app = new App();
