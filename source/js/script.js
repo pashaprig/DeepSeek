@@ -8,6 +8,7 @@ class App {
   }
 
   constructor() {
+
   }
 
   initMobileMenu() {
@@ -52,6 +53,15 @@ class App {
   }
 
   initRange() {
+    let amount = 1000
+    let month = 2
+
+    const update = () => {
+      return '$ ' + Math.round(amount * (month * 1.85))
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    };
+
     function getMonthWord(number) {
       const lastDigit = number % 10;
       const lastTwoDigits = number % 100;
@@ -78,16 +88,18 @@ class App {
         hide_from_to: true,
         min: 250,
         max: 10000,
-        from: 5000,
+        from: amount,
         postfix: " $",
         grid: false,
         onStart: function (data) {
+          $("#profitValue").text(update());
           $("#calcResult").text('$ ' + data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
         },
         onChange: function (data) {
-          $("#profitValue").text('$ ' + Math.round((data.from * 0.32) + data.from).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+          amount = data.from
           $("#calcResult").text('$ ' + data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
-        },
+          $("#profitValue").text(update());
+        }
       });
     });
     $(function () {
@@ -97,10 +109,11 @@ class App {
         hide_from_to: true,
         min: 1,
         max: 12,
-        from: 4,
+        from: month,
         postfix: " месяц",
         grid: false,
         onStart: function () {
+          $("#profitValue").text(update());
           setTimeout(function () {
             const slider = document.querySelector(".js-irs-1");
             if (slider) {
@@ -113,15 +126,14 @@ class App {
         },
         onChange: function (data) {
           const monthWord = getMonthWord(data.from);
+          month = data.from
           $("#calcResult2").text(data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ' + monthWord);
-
-          const summValue = document.querySelector('#profitValue');
-          const value = summValue.textContent.replace('$', '').trim().replace(/ /g, '');
-          summValue.textContent = `$ ${Math.round(Number(value * 1.02).toFixed(1)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")}`;
+          $("#profitValue").text(update());
         },
       });
     });
   }
+
 
   initSliderReview() {
     $(function () {

@@ -54,6 +54,9 @@
   display: flex;
   gap: 15px;
   align-items: center;
+  margin-top: auto;
+  padding-top: 30px;
+  border-top: 1px solid #dedee9;
 }
 
 .review__name-wrapper {
@@ -91,8 +94,4 @@
   margin-bottom: 16px;
   font-size: 25px;
   font-weight: 400;
-}
-
-.review__text-wrapper {
-  border-bottom: 1px solid #dedee9;
 }
