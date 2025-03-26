@@ -2,7 +2,9 @@ class App {
   init() {
     this.initMobileMenu();
     this.initRange();
-    this.initSlider();
+    this.initSliderReview();
+    this.showHide()
+    this.modal()
   }
 
   constructor() {
@@ -99,7 +101,7 @@ class App {
         postfix: " месяц",
         grid: false,
         onStart: function () {
-          setTimeout(function() {
+          setTimeout(function () {
             const slider = document.querySelector(".js-irs-1");
             if (slider) {
               const max = slider.querySelector(".irs-max");
@@ -121,9 +123,11 @@ class App {
     });
   }
 
-  initSlider() {
+  initSliderReview() {
     $(function () {
-      $('.slider').slick({
+      const $slider = $('#slider-review');
+
+      $slider.slick({
         arrows: true,
         slidesToShow: 4,
         variableWidth: true,
@@ -146,10 +150,56 @@ class App {
           },
         ]
       });
-    })
+
+      $slider.on('wheel', function (event) {
+        if (event.originalEvent.shiftKey || Math.abs(event.originalEvent.deltaX) > 0) {
+          event.preventDefault();
+          const $slickList = $(this).find('.slick-list');
+          $slickList.scrollLeft($slickList.scrollLeft() + event.originalEvent.deltaY + event.originalEvent.deltaX);
+        }
+      });
+    });
   }
 
+  showHide() {
+    document.querySelectorAll('.faq__container').forEach(container => {
+      const button = container.querySelector('.faq__toggle-btn');
+      const content = container.querySelector('.faq__dropdown-content');
 
+      button.addEventListener('click', function () {
+        content.classList.toggle('show');
+        button.classList.toggle('show');
+      });
+    });
+  }
+
+  modal() {
+    const buttons = document.querySelectorAll('[aria-label="openModal"]');
+    const modal = document.querySelector('.modal');
+    const closeBtn = modal.querySelector('.modal__close-btn');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        modal.classList.add('active');
+      });
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        modal.classList.remove('active');
+      }
+    });
+  }
 }
 
 const app = new App();

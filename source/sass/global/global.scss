@@ -51,6 +51,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-height: fit-content;
   max-width: fit-content;
   padding: 18px 34px;
   color: $basic-white;

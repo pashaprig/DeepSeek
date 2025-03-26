@@ -35,7 +35,7 @@
           <option value="en">en</option>
           <option value="ru">ru</option>
         </select>
-        <button class="btn">Оставить заявку на доступ</button>
+        <button class="btn" aria-label="openModal">Оставить заявку на доступ</button>
       </div>
       <button class="main-nav__toggle" type="button">
         <span class="main-nav__open-btn-text visually-hidden">Mеню</span>
@@ -46,7 +46,7 @@
         <option value="en">en</option>
         <option value="ru">ru</option>
       </select>
-      <button class="btn">Оставить заявку на доступ</button>
+      <button class="btn" aria-label="openModal">Оставить заявку на доступ</button>
     </div>
   </header>
   <main>
@@ -56,23 +56,7 @@
         <h1 class="promo__heading heading-color">Добро пожаловать в DeepSeek V3 Trader&nbsp;– cледующее поколение
           трейдинга</h1>
         <p class="promo__about">Инновационная платформа, где искусственный интеллект работает на ваш капитал.</p>
-        <button class="btn">Оставить заявку на доступ</button>
-        <!-- <form action="#" class="form" method="POST" id="leadform1">
-          <input type="text" name="name" id="name" placeholder="Имя Фамилия">
-          <input type="email" name="email" id="email" placeholder="Эл. адрес">
-          <input type="tel" name="phone1" placeholder="" id="phone1" />
-          <input id="realPhone1" class="hidden-phone" type="hidden" name="phone" value="" />
-          <input type="hidden" name="currency" value="usd">
-          <input id="country1" type="hidden" name="country" value="ru">
-          <input type="hidden" name="comment" class="comment" value="">
-          <input type="hidden" name="campaign_name" value="">
-          <button class="btn submit_btn" type="submit">
-            <span>Отправить заявку</span>
-          </button>
-          <div class="form_message error inactive"
-            style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
-          </div>
-        </form> -->
+        <button class="btn" aria-label="openModal">Оставить заявку на доступ</button>
       </div>
     </section>
 
@@ -104,7 +88,7 @@
             инвестирования в будущее.</p>
         </li>
       </ul>
-      <button class="btn">Оставить заявку на доступ</button>
+      <button class="btn" aria-label="openModal">Оставить заявку на доступ</button>
     </section>
 
     <section class="about container" id="about">
@@ -173,7 +157,7 @@
         </li>
       </ul>
 
-      <button class="btn">Оставить заявку на доступ</button>
+      <button class="btn" aria-label="openModal">Оставить заявку на доступ</button>
     </section>
 
     <div class="ceo-calculator__bcg-wrapper">
@@ -189,7 +173,7 @@
             инструмент для <strong>финансовой независимости</strong>, объединяющий инновации, многолетний опыт и лучшие
             мировые практики,
             чтобы сделать инвестиции <strong>доступными и прибыльными</strong> для всех.”</p>
-          <button class="btn">Оставить заявку на доступ</button>
+          <button class="btn" aria-label="openModal">Оставить заявку на доступ</button>
         </div>
       </section>
 
@@ -212,7 +196,7 @@
             <span id="profitValue">$ 1 220 522</span>
             <p>Не упустите свой шанс воспользоваться современной системой на основе ИИ в нефтегазовой отрасли.
               Заполните форму, свяжитесь с менеджером и начните инвестировать прямо сейчас!</p>
-            <button class="btn">Оставить заявку на доступ</button>
+            <button class="btn" aria-label="openModal">Оставить заявку на доступ</button>
           </div>
 
           <div class="profit__wrapper">
@@ -361,7 +345,7 @@
       <h2 class="review__heading heading">Истории успеха и реальные возможности с DeepSeek V3 Trader</h2>
       <p class="review__about">Наши первые инвесторы – лучшее доказательство эффективности DeepSeek. Ознакомьтесь с
         отзывами реальных пользователей:</p>
-      <div class="slider">
+      <div class="slider" id="slider-review">
         <div class="review__card slider__item">
           <picture>
             <source type="image/webp" srcset="img/img/stars.webp">
@@ -484,13 +468,67 @@
       </div>
     </section>
 
-    <sectin class="opportunities container">
+    <section class="opportunities container">
       <h2 class="opportunities_heading heading">Дополнительные возможности DeepSeek V3 Trader:</h2>
-
-    </sectin>
+      <ul class="opportunities__list">
+        <li class="opportunities__item">
+          <h3 class="opportunities__subheading">До 15% за одну сделку</h3>
+          <p class="opportunities__about">Доступ к инновационным инвестиционным инструментам с прогнозируемой
+            доходностью до 15% за одну сделку.</p>
+        </li>
+        <li class="opportunities__item opportunities__item--blue">
+          <h3 class="opportunities__subheading">Полная прозрачность</h3>
+          <p class="opportunities__about">Полная прозрачность и контроль всех операций через интуитивно понятный
+            интерфейс и личного ассистента.
+          </p>
+        </li>
+        <li class="opportunities__item">
+          <h3 class="opportunities__subheading">Надёжная защита данных</h3>
+          <p class="opportunities__about">Надёжная защита данных и финансовых средств с шифрованием 256-bit.
+          </p>
+        </li>
+      </ul>
+    </section>
 
     <section class="faq" id="faq">
-      <h2 class="faq_heading heading">Ответы на вопросы будущих инвесторов</h2>
+      <h2 class="faq__heading heading">Ответы на вопросы будущих инвесторов</h2>
+
+      <div class="faq__container">
+        <div class="faq__btn-wrapper">
+          <p class="faq__question">Как начать использовать платформу DeepSeek V3 Trader?</p>
+          <button class="faq__toggle-btn show">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq__dropdown">
+          <div class="faq__dropdown-content show">
+            <p>Для начала вам нужно зарегистрироваться на нашем сайте и внести первоначальный депозит от 250 долларов.
+              Затем вы получите доступ к нашей торговой платформе и сможете начать использовать наши инструменты для
+              инвестирования.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__container">
+        <div class="faq__btn-wrapper">
+          <p class="faq__question">Как начать использовать платформу DeepSeek V3 Trader?</p>
+          <button class="faq__toggle-btn">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq__dropdown">
+          <div class="faq__dropdown-content">
+            <p>Для начала вам нужно зарегистрироваться на нашем сайте и внести первоначальный депозит от 250 долларов.
+              Затем вы получите доступ к нашей торговой платформе и сможете начать использовать наши инструменты для
+              инвестирования.</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn" aria-label="openModal">Оставить заявку на доступ</button>
     </section>
   </main>
 
@@ -500,7 +538,7 @@
         <source type="image/webp" srcset="img/img/logo.webp">
         <img width="282" height="83" class="page-header__img" src="img/img/logo.png" alt="Логотип Halyk revolution">
       </picture>
-      <button class="btn">Оставить заявку на доступ</button>
+      <button class="btn" aria-label="openModal"">Оставить заявку на доступ</button>
     </div>
     <nav class="page-footer__wrapper">
       <ul class="main-nav__list">
@@ -510,6 +548,37 @@
       </ul>
     </nav>
   </footer>
+
+  <section class="modal">
+    <div class="modal__wrapper">
+      <h2 class="modal__heading heading">Заполните форму</h2>
+      <p class="modal__about">Выйдите на контакт с менеджером для получения полного доступа к платформе</p>
+      <button class="modal__close-btn" >
+        <svg width="20" height="20">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+        <span class="visually-hidden">Закрыть модальное окно</span>
+      </button>
+
+    <form action="#" class="form" method="POST" id="leadform1">
+      <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+      <input type="email" name="email" id="email" placeholder="Эл. адрес">
+      <input type="tel" name="phone1" placeholder="" id="phone1" />
+      <input id="realPhone1" class="hidden-phone" type="hidden" name="phone" value="" />
+      <input type="hidden" name="currency" value="usd">
+      <input id="country1" type="hidden" name="country" value="ru">
+      <input type="hidden" name="comment" class="comment" value="">
+      <input type="hidden" name="campaign_name" value="">
+      <button class="btn submit_btn" type="submit">
+        <span>Оставить заявку на доступ</span>
+      </button>
+      <div class="form_message error inactive"
+        style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #DF5E63;border-radius: 10px;padding: 20px;max-width: 350px;">
+      </div>
+    </form>
+  </div>
+  </section>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/ion.rangeSlider.min.js"></script>
   <script src="js/slick.min.js"></script>
