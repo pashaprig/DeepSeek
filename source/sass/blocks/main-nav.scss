@@ -63,10 +63,9 @@
 }
 
 .main-nav__item {
-  cursor: pointer;
-
   a {
     color: $text-black;
+    cursor: pointer;
 
     &:hover {
       color: $main-color;

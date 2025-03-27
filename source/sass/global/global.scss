@@ -69,6 +69,17 @@ button {
   &:active {
     opacity: 0.8;
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: $basic-white;
+    background: #DDD;
+  }
+
+  &:disabled:hover {
+    color: $basic-white;
+    background: #DDD;
+  }
 }
 
 .container {

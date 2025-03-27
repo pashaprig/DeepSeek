@@ -40,6 +40,8 @@
 }
 
 .ceo__img {
+  filter: blur(3px);
+
   @media (max-width: $tablet-width) {
     width: 100%;
     height: auto;

@@ -21,6 +21,7 @@
 input {
   box-sizing: border-box;
   max-height: 45px;
+  width: 100%;
   padding: 8px 12px;
   font-size: 16px;
   font-weight: 400;
@@ -58,6 +59,7 @@ input {
 }
 
 label.error {
+  margin-right: auto;
   margin-top: -25px;
   text-align: right;
   font-weight: 400;
@@ -68,7 +70,6 @@ label.error {
 #phone1-error,
 #phone2-error {
   display: flex;
-  justify-content: end;
   margin-top: 5px;
 }
 
@@ -82,4 +83,8 @@ label.error {
 
 input[type="checkbox"] {
   accent-color: $basic-black;
+}
+
+.iti__selected-flag {
+  border-radius: 1000px 0 0 1000px;
 }

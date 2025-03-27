@@ -29,29 +29,6 @@
 }
 
 .page-header__lang-wrapper {
-  gap: 20px;
-  align-items: center;
-
-  select {
-    width: 45px;
-    padding: 6px 0;
-    font-size: 16px;
-    border: 0;
-    background-color: $basic-white;
-    font-family: "Montserrat", "Arial", sans-serif;
-    font-size: 13px;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-
-  select:hover {
-    outline: 1px solid $main-color;
-  }
-
-  select:active,
-  select:focus {
-    outline: 1px solid $main-color;
-  }
 
   @media (max-width: $tablet-width) {
     margin-top: auto;
